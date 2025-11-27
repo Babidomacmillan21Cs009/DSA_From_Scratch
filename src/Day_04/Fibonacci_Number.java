@@ -32,6 +32,8 @@ public class Fibonacci_Number {
         int n = 5;
         int result = fibonacci(n);
         System.out.println(result);
+        int res = fib(n);
+        System.out.println(res);
     }
 
 }
