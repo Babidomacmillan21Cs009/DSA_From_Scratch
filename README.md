@@ -1,11 +1,13 @@
-🌟 DSA From Scratch – Consistency, Discipline & Growth
+## 🌟 DSA From Scratch – Consistency, Discipline & Growth
 
 By Babido Macmillan
 
 Welcome to my Data Structures & Algorithms from Scratch journey.
 This repo reflects my commitment to showing up regularly, learning from the basics, and building strong problem-solving skills using Java.
 
-🚀 Why I Started
+------------------------------------------------------------------------------------------
+
+## 🚀 Why I Started
 
 I wanted to:
 
@@ -25,7 +27,9 @@ So I decided to:
 
 This repository is my learning space and proof of effort.
 
-📌 What’s Inside This Repository
+------------------------------------------------------------------------------------------
+
+## 📌 What’s Inside This Repository
 
 Beginner-friendly Java solutions
 
@@ -39,7 +43,9 @@ Time & space complexity notes
 
 You can use this as a simple and practical roadmap if you’re learning DSA too.
 
-🎯 Goals of This Journey
+------------------------------------------------------------------------------------------
+
+## 🎯 Goals of This Journey
 
 Build strong DSA foundations
 
@@ -51,7 +57,9 @@ Become confident with coding challenges
 
 Prepare for technical interviews
 
-🧠 How I Learn & Practice
+------------------------------------------------------------------------------------------
+
+## 🧠 How I Learn & Practice
 
 Every problem includes:
 
@@ -63,29 +71,18 @@ Every problem includes:
 
 My focus is on learning how to think, not just how to code.
 
-📂 Repository Structure
-DSA_From_Scratch/
-│
-├── Day_01/
-├── Day_02/
-│
-├── Arrays/
-├── Strings/
-├── LinkedList/
-├── Stack/
-├── Queue/
-└── Patterns/
+------------------------------------------------------------------------------------------
 
 
-The structure may grow as I learn more.
-
-🤝 Let’s Connect
+## 🤝 Let’s Connect
 
 If you’re also learning DSA or preparing for backend development, feel free to check my work or connect:
 
 🔗 LinkedIn: https://www.linkedin.com/in/babido-macmillan
 
-⭐ Final Note
+------------------------------------------------------------------------------------------
+
+## ⭐ Final Note
 
 This journey is not about perfection —
 it’s about showing up, learning honestly, and growing one step at a time. 🚀
