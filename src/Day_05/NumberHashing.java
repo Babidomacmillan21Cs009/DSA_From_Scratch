@@ -1,6 +1,6 @@
 package Day_05;
 
-public class Frequency_Counting_using_Array_Hashing {
+public class NumberHashing {
 
     public static void countFrequency(int[] arr, int[] nums){
         // we mentioned size as 13 to access 12th num in index  0 --> 12
