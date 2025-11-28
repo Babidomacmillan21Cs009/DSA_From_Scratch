@@ -1,6 +1,7 @@
 package Day_05;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class NumberHashing {
 
@@ -21,7 +22,7 @@ public class NumberHashing {
 
     // Using HashMap Data Structure
     public static void frequency(int[] arr, int[] nums){
-        HashMap<Integer, Integer> map = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>();
         // Count frequency
         for (int i = 0; i < arr.length; i++){
             map.put(arr[i], map.getOrDefault(arr[i], 0) +1);

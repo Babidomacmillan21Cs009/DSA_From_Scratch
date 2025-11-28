@@ -2,6 +2,7 @@ package Day_05;
 
 import javax.print.attribute.HashPrintJobAttributeSet;
 import java.util.HashMap;
+import java.util.Map;
 
 public class CharacterHashing {
 
@@ -18,7 +19,7 @@ public class CharacterHashing {
     }
 
     public static void frequency(String str, String ch){
-        HashMap<Character, Integer> map = new HashMap<>();
+        Map<Character, Integer> map = new HashMap<>();
         // Count frequency
         for (int i = 0; i <str.length(); i++){
             map.put(str.charAt(i), map.getOrDefault(str.charAt(i),0) +1);
