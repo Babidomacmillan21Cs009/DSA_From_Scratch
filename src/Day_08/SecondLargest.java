@@ -1,10 +1,13 @@
 package Day_08;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class SecondLargest {
 
-    public static int secondMax(int[] arr, int n){
+    public static List<Integer> secondMax(int[] arr, int n){
         int firstMax = arr[0];
-        int secondMax = 0;
+        int secondMax = Integer.MIN_VALUE;
         for (int i = 0; i < n; i++){
             if (arr[i] > firstMax){
                 secondMax = firstMax;
@@ -13,7 +16,7 @@ public class SecondLargest {
             else if (arr[i] > secondMax && firstMax != arr[i])
                 secondMax = arr[i];
         }
-        return secondMax;
+        return Arrays.asList(firstMax, secondMax);
     }
 
     public static void main(String[] args) {
