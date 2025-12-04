@@ -1,4 +1,4 @@
-package Day_08;
+package Day_07;
 
 public class Qucik_Sort {
 
