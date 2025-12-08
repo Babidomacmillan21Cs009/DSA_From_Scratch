@@ -14,7 +14,7 @@ public class Rotate_array_by_K_places {
     }
 
     public static void rotate(int[] arr, int k, int n){
-        k = k % n;
+        k = k % n;     // When k is larger than array size.
         reverse(arr, 0, n - k - 1);
         reverse(arr, n - k, n - 1);
         reverse(arr, 0, n - 1);
