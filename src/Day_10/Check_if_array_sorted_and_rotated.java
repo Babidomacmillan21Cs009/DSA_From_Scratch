@@ -1,6 +1,6 @@
 package Day_10;
 
-public class sortedRotated {
+public class Check_if_array_sorted_and_rotated {
 
     public static boolean rotate(int[] arr, int n){
         int k = -1;
