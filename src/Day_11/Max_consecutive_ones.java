@@ -8,10 +8,10 @@ public class Max_consecutive_ones {
         for (int i = 0; i < n; i++){
             if (arr[i] == 1){
                 cnt++;
-                maxOnes = Math.max(maxOnes, cnt);
             }
             else
                 cnt = 0;
+            maxOnes = Math.max(maxOnes, cnt);
         }
         return maxOnes;
     }
