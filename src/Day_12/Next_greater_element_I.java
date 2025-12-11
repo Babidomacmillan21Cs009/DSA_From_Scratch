@@ -10,7 +10,7 @@ public class Next_greater_element_I {
             while (nums1[i] != nums2[j]) {
                 j++;
             }
-            while (nums1[i] >= nums2[j] && j < n2 - 1) {
+            while (nums1[i] >= nums2[j] && j <= n2 - 2) {
                 j++;
             }
             if (nums1[i] < nums2[j])
