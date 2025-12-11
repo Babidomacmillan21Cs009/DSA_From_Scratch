@@ -7,11 +7,11 @@ public class Next_greater_element_I {
         int n2 = nums2.length;
         for (int i = 0; i < n1; i++) {
             int j = 0;
-            while (nums1[i] != nums2[j]) {
+            while (nums1[i] != nums2[j]) {      // if not equal go and find equal
                 j++;
             }
-            while (nums1[i] >= nums2[j] && j <= n2 - 2) {
-                j++;
+            while (nums1[i] >= nums2[j] && j <= n2 - 2) {  // move j until finding bigger value
+                j++;                    // make sure j goes until second last bcz iff last is greater than we get ans
             }
             if (nums1[i] < nums2[j])
                 nums1[i] = nums2[j];

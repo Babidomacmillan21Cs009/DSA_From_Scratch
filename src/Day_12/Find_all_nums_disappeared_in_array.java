@@ -9,8 +9,10 @@ public class Find_all_nums_disappeared_in_array {
         List<Integer> list = new ArrayList<>();
 
         for (int i = 0; i < n; i++){
-            int index = (arr[i] - 1) % n;
-            arr[index] = arr[index] + n;
+            int index = (arr[i] - 1) % n;       // if already changed get the original value index by doing %
+            // checking does this one already marked bcz it has 1 - n then adding n leads to have greater than n such way we can find
+            if (arr[index] <= n)
+                arr[index] = arr[index] + n;
         }
 
         for (int i = 0; i < n; i++){
