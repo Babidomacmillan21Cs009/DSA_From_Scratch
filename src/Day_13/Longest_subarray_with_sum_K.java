@@ -23,6 +23,7 @@ public class Longest_subarray_with_sum_K {
     // Space complexity - O(1)
 
 
+    // Better solution...It is also Optimal solution when array contains positive, negative and zeros
     public static int longestSubarrayWithSumK(int[] arr, int k){
         Map<Long, Integer> pre = new HashMap<>();
         long sum = 0;
@@ -43,11 +44,36 @@ public class Longest_subarray_with_sum_K {
         }
         return maxLen;
     }
+    // Time complexity - O(n)
+    // Space complexity - O(n)
+
+    // Optimal solution
+    public static int findMaxLengthWithSumK(int[] arr, int k){
+        int n = arr.length;
+        int left = 0, right = 0;
+        long sum = 0;
+        int maxLen = 0;
+
+        while (right < n){
+            sum += arr[right];
+            while (sum > k && left <= right){
+                sum -= arr[left];
+                left++;
+            }
+            if (sum == k)
+                maxLen = Math.max(maxLen, right - left + 1);
+            right++;
+        }
+        return maxLen;
+    }
+    // Time complexity - O(n)
+    // Space complexity - O(1)
 
     public static void main(String[] args) {
         int[] arr = {1,2,3,1,1,1,1,4,2,3};
         int k = 3;
 //        System.out.println(findLongestLength(arr, k));
-        System.out.println(longestSubarrayWithSumK(arr, k));
+//        System.out.println(longestSubarrayWithSumK(arr, k));
+        System.out.println(findMaxLengthWithSumK(arr, k));
     }
 }
