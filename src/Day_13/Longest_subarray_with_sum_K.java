@@ -56,13 +56,13 @@ public class Longest_subarray_with_sum_K {
 
         while (right < n){
             sum += arr[right];
-            while (sum > k && left <= right){
+            while (sum > k && left <= right){       // ensure the left must be shrinking inside the right window
                 sum -= arr[left];
                 left++;
             }
             if (sum == k)
                 maxLen = Math.max(maxLen, right - left + 1);
-            right++;
+            right++;                // we move right last move after calculating the current len then we move
         }
         return maxLen;
     }
