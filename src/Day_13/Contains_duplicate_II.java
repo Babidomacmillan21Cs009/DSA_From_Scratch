@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Contains_duplicate_II {
 
-
+    // Brute forch
     public static boolean containsNearbyDuplicate(int[] nums, int k){
         int n = nums.length;
         for (int i = 0; i <= n -2; i++){
@@ -21,23 +21,27 @@ public class Contains_duplicate_II {
         }
         return false;
     }
+    // Time complexity - O(n^2)
+    // Space complexity - O(1)
 
+    // Optimal
     public static boolean containsNearDuplicate(int[] nums, int k){
         int n = nums.length;
         Map<Integer ,Integer> map = new HashMap<>();
         for (int i = 0; i < n; i++){
-            if (map.containsKey(nums[i])){
-                int preIdx = map.get(nums[i]);
-                int curIdx = i;
+            if (map.containsKey(nums[i])){           // Check the num already appear the get index
+                int preIdx = map.get(nums[i]);         // get last seen index
+                int curIdx = i;                         // get new index
                 int len = curIdx - preIdx;
                 if (len <= k)
                     return true;
             }
-            map.put(nums[i], i);
+            map.put(nums[i], i);            // store elem with new index
         }
         return false;
     }
-
+    // Time complexity - O(n)
+    // Space complexity - O(n)
 
 
     public static void main(String[] args) {
