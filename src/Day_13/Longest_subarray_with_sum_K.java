@@ -29,14 +29,16 @@ public class Longest_subarray_with_sum_K {
         int maxLen = 0, n = arr.length;
         for (int i = 0; i < n; i++){
             sum += arr[i];
-            if (sum == k)
+
+            if (sum == k)                  // if prefix sum itself equals k
                 maxLen = Math.max(maxLen, i + 1);
 
             long rem = sum - k;
             if (pre.containsKey(rem)){
-                int len = i - pre.get(rem);
+                int len = i - pre.get(rem);         // if found get the length
                 maxLen = Math.max(maxLen, len);
             }
+            // store first occurrence of this prefix sum only
             pre.putIfAbsent(sum, i);
         }
         return maxLen;
