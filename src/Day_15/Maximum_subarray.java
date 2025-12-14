@@ -47,9 +47,32 @@ public class Maximum_subarray {
     // Time complexity - O(n)
     // Space complexity - O1)
 
+    // It will print the subArray of max sum
+    public static void MaxSumSubarray(int[] nums, int n){
+        int maxSum = nums[0];
+        int sum = 0,start = 0;
+        int ansStart = 0, ansEnd = 0;
+        for (int i = 0; i < n; i++){
+            if (sum == 0)
+                start = i;
+            sum += nums[i];
+            if (maxSum < sum){
+                maxSum = sum;
+                ansStart = start;
+                ansEnd = i;
+            }
+            if (sum < 0)
+                sum = 0;
+        }
+        for (int i = start; i <= ansEnd; i++){
+            System.out.print(nums[i]+" ");
+        }
+    }
+
     public static void main(String[] args) {
-        int[] nums = {5,4,-1,7,8};
+        int[] nums = {-2,-3,4,-1,-2,1,5,-3};
 //        System.out.println(maxSubArray(nums, nums.length));
         System.out.println(subArray(nums, nums.length));
+        MaxSumSubarray(nums, nums.length);
     }
 }
