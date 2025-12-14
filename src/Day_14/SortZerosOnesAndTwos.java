@@ -55,6 +55,7 @@ public class SortZerosOnesAndTwos {
     }
 
     public static void main(String[] args){
+        // The Array must contains only 0's 1's and 2's
         int[] arr = {0,1,2,0,1,2,2,2,1,1,0,0,1};
 //        sortZeroOneTwo(arr, arr.length);
         sortZerosOnesAndTwos(arr, arr.length);
