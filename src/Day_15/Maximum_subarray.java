@@ -64,7 +64,7 @@ public class Maximum_subarray {
             if (sum < 0)
                 sum = 0;
         }
-        for (int i = start; i <= ansEnd; i++){
+        for (int i = ansStart; i <= ansEnd; i++){
             System.out.print(nums[i]+" ");
         }
     }
