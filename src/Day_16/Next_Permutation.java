@@ -34,6 +34,8 @@ public class Next_Permutation {
             end--;
         }
     }
+    // Time complexity - O(n)
+    // Space complexity - O(1)
 
     public static void main(String[] args){
         int[] arr = {7,1,4,5,6,3,2};        // 7 1 4 6 2 3 5
