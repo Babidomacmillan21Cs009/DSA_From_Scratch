@@ -1,6 +1,8 @@
 package Day_17;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Longest_consecutive_sequence {
 
@@ -47,10 +49,39 @@ public class Longest_consecutive_sequence {
         }
         return longest;
     }
+    // Time complexity - O(n) + O(N log n)
+    // Space complexity - O(1)
+
+    // Optimal
+    public static int findLongestSequence(int[] arr, int n){
+        Set<Integer> set = new HashSet<>();
+        if (n == 0) return 0;
+        int longest = 1;
+
+        for (int num : arr){
+            set.add(num);
+        }
+        System.out.println(set);
+
+        for (int num : set){
+            if (!set.contains(num - 1)){     // // start only if num is the beginning
+                int current = num;
+                int count = 1;
+                while (set.contains(current + 1)){         // if next elem is there just count it
+                    current++;
+                    count++;
+                }
+                longest = Math.max(longest, count);
+            }
+        }
+
+        return  longest;
+    }
 
     public static void main(String[] args) {
         int[] arr = {100,4,200,1,3,2};
 //        System.out.println(longestConsecutiveSequence(arr, arr.length));
-        System.out.println(findLongest(arr, arr.length));
+//        System.out.println(findLongest(arr, arr.length));
+        System.out.println(findLongestSequence(arr, arr.length));
     }
 }
