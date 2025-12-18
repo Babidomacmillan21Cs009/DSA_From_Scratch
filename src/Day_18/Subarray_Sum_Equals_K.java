@@ -1,5 +1,8 @@
 package Day_18;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Subarray_Sum_Equals_K {
 
     public static int subArray(int[] nums, int k){
@@ -41,11 +44,28 @@ public class Subarray_Sum_Equals_K {
     // Time complexity - O(n)
     // Space complexity - O(1)
 
+    // Optimal
+    public static int subArrWithSumK(int[] nums, int k){
+        Map<Integer, Integer> preSum = new HashMap<>();
+        int count = 0;
+        int sum = 0;
+        preSum.put(sum,1);
+        for (int num : nums){
+            sum += num;
+            if (preSum.containsKey(sum - k))
+                count += preSum.get(sum - k);
+            preSum.put(sum, preSum.getOrDefault(sum, 0) + 1);
+        }
+        return count;
+    }
+    // Time complexity - O(n)
+    // Space complexity - O(n)
 
     public static void main(String[] args) {
         int[] nums = {1,2,3,-3,1,1,1,4,2,-3};
         int k = 3;
-        System.out.println(subArray(nums, k));
+//        System.out.println(subArray(nums, k));
 //        System.out.println(sunArr(nums, k));
+        System.out.println(subArrWithSumK(nums, k));
     }
 }
