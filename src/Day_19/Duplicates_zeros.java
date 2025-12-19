@@ -1,6 +1,26 @@
 package Day_19;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Duplicates_zeros {
+
+
+    public static void dupZeros(int[] arr, int n){
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < n; i++){
+            if (arr[i] == 0)
+                list.add(arr[i]);
+            list.add(arr[i]);
+        }
+
+        for (int i = 0; i < n; i++){
+            System.out.print(list.get(i)+" ");
+        }
+        System.out.println();
+    }
+    // Time complexity - O(n)
+    // Space Complexity - O(n)
 
     public static void duplicateZeros(int[] arr, int n){
         int zeroCount = 0;
@@ -30,6 +50,7 @@ public class Duplicates_zeros {
 
     public static void main(String[] args) {
         int[] arr = {1,0,2,3,0,4,5,0};
+//        dupZeros(arr, arr.length);
         duplicateZeros(arr, arr.length);
         for (int i : arr){
             System.out.print(i+" ");
