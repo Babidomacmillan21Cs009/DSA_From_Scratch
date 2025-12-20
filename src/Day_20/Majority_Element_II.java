@@ -35,7 +35,7 @@ public class Majority_Element_II {
     // Time complexity - O(n)
     // Space complexity - O(n)
 
-    public static List<Integer> majorityElements(int[] arr, int n){
+    public static List<Integer> majorityElements(int[] arr, int n){     // 1,1,1,3,3,2,2,2 at max 2 elements only appear in n / 3
         List<Integer> list = new ArrayList<>();
         int count1 = 0, count2 = 0;
         int can1 = 0, can2 = 0;
@@ -56,8 +56,8 @@ public class Majority_Element_II {
             }
         }
         // check the nums are appear more than n / 3 times
-        count1 = 0;    // it holds can1
-        count2 = 0;
+        count1 = 0;    // it indicates can1
+        count2 = 0;   // it indicates can 2
         for (int num : arr){
             if (num == can1) count1++;
             else if (num == can2) count2++;
