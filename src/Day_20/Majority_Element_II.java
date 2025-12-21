@@ -8,13 +8,15 @@ public class Majority_Element_II {
     public static List<Integer> majorityElement(int[] arr, int n){
         List<Integer> list = new ArrayList<>();
         for (int i = 0; i < n; i++){
-            int count = 1;
-            for (int j = i + 1; j < n; j++){
-                if (arr[i] == arr[j])
-                    count++;
+            if (list.size() == 0 || !list.contains(arr[i])){
+                int count = 0;
+                for (int j = 0; j < n; j++){
+                    if (arr[i] == arr[j])
+                        count++;
+                }
+                if (count > n / 3)
+                    list.add(arr[i]);
             }
-            if (count > n / 3)
-                list.add(arr[i]);
         }
         return list;
     }
@@ -71,9 +73,9 @@ public class Majority_Element_II {
 
 
     public static void main(String[] args) {
-        int[] arr = {3,2,3};
-//        System.out.println(majorityElement(arr, arr.length));
-//        System.out.println(majElem(arr, arr.length));  // HashMap
+        int[] arr = {3,2,3,2,2,3,3};
+        System.out.println(majorityElement(arr, arr.length));
+        System.out.println(majElem(arr, arr.length));  // HashMap
         System.out.println(majorityElements(arr, arr.length));
     }
 }
